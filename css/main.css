@@ -1,0 +1,41 @@
+#phyArchitecture {
+    border:0;
+    background:none;
+    box-shadow:none;
+    max-height: 115%;
+    max-width: 115%;
+}
+
+#architecture {
+    border:0;
+    background:none;
+    box-shadow:none;
+    max-height: 115%;
+    max-width: 115%;
+}
+
+#policiesImg{
+    border:0;
+    background:none;
+    box-shadow:none;
+    max-height: 115%;
+    max-width: 115%;
+}
+
+#mediaAdapterImg{
+    border:0;
+    background:none;
+    box-shadow:none;
+    max-height: 115%;
+    max-width: 115%;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    font-size: 0.7em !important;
+}
+
+.smfont {
+    font-size: 0.7em !important;
+}
