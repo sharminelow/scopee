@@ -40,7 +40,7 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides" style="width: 100% !important; height: 100% !important">
+			<div class="slides">
 				<section style="width: 100% !important; height: 100% !important; padding: 0 !important;">
 						<div id="videoTitleContainer">
 							<h1 id="videoTitle">Worldscope</h1>
@@ -336,108 +336,7 @@
                     </section>
                 </section>
 
-                <!-- Project Planning, Prioritization of tasks -->
-                <!-- UI - Android Evaluation and Prototyping -->
-
-                <section>
-                    <section>
-                        <img src="images/admin.png" />
-                    </section>
-                    <section>
-                        <h2>Plans</h2>
-                        <ul>
-                            <li>Login</li>
-                            <li>Metrics</li>
-                            <li>Streams</li>
-                            <li>Users</li>
-                            <li>Settings</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <img src="images/admin-streams.png" />
-                    </section>
-                    <section>
-                        <img src="images/admin-stream.png" />
-                    </section>
-				</section>
-
-				<section>
-                    <table>
-                    	<tbody>
-							<tr>
-								<td  style="vertical-align: middle"><strong>Week 1 ~ 4</strong></td>
-								<td>
-									<ul>
-			                            <li>User registration / login</li>
-			                            <li>Individual streams</li>
-			                            <li>Media server integration</li>
-			                            <li>Admin login</li>
-                        			</ul>
-                        		</td>
-							</tr>
-							<tr>
-								<td  style="vertical-align: middle"><strong>Week 5 ~ 8</strong></td>
-								<td>
-									<ul>
-			                            <li>Comment system</li>
-			                            <li>Admin metrics</li>
-                        			</ul>
-								</td>
-							</tr>
-							<tr>
-								<td  style="vertical-align: middle"><strong>Week 9 ~ 13</strong></td>
-								<td>
-									<ul>
-			                            <li>Sticker system</li>
-			                            <li>Admin stream controls</li>
-			                            <li>STePS preparations</li>
-                        			</ul>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
+<!-- 				<section>
 						<h2>Fragment Styles</h2>
 						<p>There's different types of fragments, like:</p>
 						<p class="fragment grow">grow</p>
@@ -447,75 +346,6 @@
 						<p class="fragment highlight-red">highlight-red</p>
 						<p class="fragment highlight-blue">highlight-blue</p>
 					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
 
 				<section>
@@ -528,138 +358,91 @@ function linkify( selector ) {
 						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
 						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
 					</blockquote>
-				</section>
+				</section> -->
+
+
+                <!-- Project Planning, Prioritization of tasks -->
+                <section>
+                    <h2>Project Planning</h2>
+                </section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+                    <h2>Sharmine</h2>
+                    <p>Plus points</p>
+                    <ul>
+                        <li>Good with Networks</li>
+                        <li>Interested in System Administration</li>
+                    </ul>
 
-				<section class="slide-padding" data-id="0b0604d71d453da3da7f52235a42964a">
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="f01a8fb6ea6a017259520055d3219e61">
-                        <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
-                            <h2>Sharmine</h2>
-                        </div>
-                    </div>
-
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 161px; height: auto;" data-block-id="cc81827bb493909fca3d0a545ad679d6">
-                        <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;" dir="ui">
-
-                            <p>Plus points</p>
-
-                            <p class="intro-point">+  Good with networks</p>
-
-                            <p class="intro-point">+  Good with database</p>
-
-                            <p class="intro-point">+  Interested in System administration</p>
-
-                            <p>Main responsibility</p>
-
-                            <p class="intro-point">+  Implementation of media server <span>for WorldScope</span></p>
-
-                        </div>
-                    </div>
-
-                    <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="ca9f540ae19fefd196311eb2dec23774">
+                    <p>Main Responsibility</p>
+                    <ul>
+                        <li>Implementation of Media Server for WorldScope</li>
+                    </ul> 
+                    <div>
                         <div class="sl-block-content" style="z-index: 12;">
                             <!-- IMAGE OF SHARMINE HERE -->
                         </div>
                     </div>
                 </section>
 
-                <section class="slide-padding" data-id="2871e03a0e7ffe1a387449de8f73f6d4">
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="4339a9ba0dbf7410cd165fb2cb67a23c">
-                        <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left;">
-                            <h2>Thien</h2>
-                        </div>
-                    </div>
+                <section>
+                    <h2>Thien</h2>
+                    <p>Plus points</p>
+                    <ul>
+                        <li>Experienced in Software Engineering</li>
+                        <li>Extensive knowledge of various developmental tools</li>
+                    </ul>
 
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 161px; height: auto;" data-block-id="c73c588770b852924dfdbaec61fb2d02">
-                        <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;" dir="ui">
-                            <p>Plus points</p>
+                    <p>Main Responsibility</p>
+                    <ul>
+                        <li>Project manager for Litmus for the initial sprints</li>
+                        <li>Implementation of application server for WorldScope</li>
+                    </ul> 
 
-                            <p class="intro-point">+  Experienced in Software Engineering</p>
-
-                            <p class="intro-point">+  Extensive knowledge of various developmental tools</p>
-
-                            <p>Main responsibility</p>
-
-                            <p class="intro-point">+  Project manager for Litmus</p>
-
-                            <p class="intro-point">+  
-                                <span>Implementation of</span>
-                                <span> application server for WorldScope</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="17167b6c0786939809bde2864ec65a12">
+<!--                     <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="17167b6c0786939809bde2864ec65a12">
                         <div class="sl-block-content">
-                            <!-- IMAGE OF THIEN -->
+                            <IMAGE OF THIEN>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
 
-                <section class="slide-padding" data-id="5f8a9c929d45b31c95935c80aa4e27ee">
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 87px; height: auto;" data-block-id="03ccd4052c5eb4345dd494a11a5d24d9">
-                        <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left;">
-                            <h2>You Jun</h2>
-                        </div>
-                    </div>
+                <section>
+                    <h2>You Jun</h2>
+                    <p> Plus points</p>
+                    <ul>
+                        <li>Prior experience with content management systems on an Enterprise level</li>
+                        <li>Extensive knowledge of various developmental tools</li>
+                    </ul>
 
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 23px; top: 161px; height: auto;" data-block-id="575fc674abf1d1b53b99db4db80d9a99">
-
-                        <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;" dir="ui">
-
-                            <p>Plus points</p>
-
-                            <p class="intro-point">+  Prior experience with content management systems on an Enterprise level</p>
-
-                            <p> </p>
-
-                            <p>Main responsibility</p>
-
-                            <p class="intro-point">+  Implementation of administrator client for WorldScope</p>
-
-                        </div>
-                    </div>
-
-                    <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="349b1944b4ed9438a1666b8e09253f0c">
+                    <p>Main Responsibility</p>
+                    <ul>
+                        <li>Implementation of Administrative Panel for WorldScope</li>
+                    </ul> 
+                 <!--    <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="349b1944b4ed9438a1666b8e09253f0c">
                         <div class="sl-block-content">
-                            <!-- IMAGE OF YOU JUN -->
+                            <IMAGE OF YOU JUN>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
 
-                <section class="slide-padding" data-id="e7d49d208d1dbde61564c0fe19af5f56">
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 24px; top: 87px; height: auto;" data-block-id="492c86c5ac81fb96fcc2f7f6f4498fa4">
-                        <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left;">
-                            <h2>Wei Ming</h2>
-                        </div>
-                    </div>
-
-                    <div class="sl-block" data-block-type="text" style="width: 430px; left: 24px; top: 161px; height: auto;" data-block-id="978b9d93bf8afc955b7fe6e5c5aea7e4">
-                        <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;" dir="ui">
+                <section>
+                    <h2>Wei Ming</h2>
 
                         <p>Plus points</p>
-
-                        <p class="intro-point">+  Focused on User Interface design and interaction</p>
+                        <ul>
+                            <li>Focused on User Interface design and interaction</li>
+                        </ul>
 
                         <p>Main responsibility</p>
+                        <ul>
+                            <li>Implementation of mobile client for WorldScope</li>
+                        </ul>
 
-                        <p class="intro-point">+  Implementation of mobile client for WorldScope</p>
-
-                        </div>
-                    </div>
-
-                    <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 480px; top: 29px;" data-block-id="f61c5a3985392c31b314cb5bdbc430ac">
+<!--                     <div class="sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 480px; top: 29px;" data-block-id="f61c5a3985392c31b314cb5bdbc430ac">
                         <div class="sl-block-content">
-                            <!-- IMAGE OF WEI MING -->
+                            <IMAGE OF WEI MING >
                         </div>
-                    </div>
+                    </div> -->
                 </section>
 
 
@@ -722,6 +505,8 @@ function linkify( selector ) {
                     </div>
 
                 </section>
+
+                <!-- UI - Android Evaluation and Prototyping -->
 
 				<section class="slide-padding">
 					<div class="sl-block" data-block-type="text" data-block-id="4f142d5d007cb9107a73b482b2c7f158" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 280px;">
@@ -806,10 +591,68 @@ function linkify( selector ) {
 					</div>
 				</section>
 
+                <section>
+                    <section>
+                        <img src="images/admin.png" />
+                    </section>
+                    <section>
+                        <h2>Plans</h2>
+                        <ul>
+                            <li>Login</li>
+                            <li>Metrics</li>
+                            <li>Streams</li>
+                            <li>Users</li>
+                            <li>Settings</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="images/admin-streams.png" />
+                    </section>
+                    <section>
+                        <img src="images/admin-stream.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td  style="vertical-align: middle"><strong>Week 1 ~ 4</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>User registration / login</li>
+                                        <li>Individual streams</li>
+                                        <li>Media server integration</li>
+                                        <li>Admin login</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  style="vertical-align: middle"><strong>Week 5 ~ 8</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Comment system</li>
+                                        <li>Admin metrics</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  style="vertical-align: middle"><strong>Week 9 ~ 13</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Sticker system</li>
+                                        <li>Admin stream controls</li>
+                                        <li>STePS preparations</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
 			</div>
 		</div>
-			</div>
-		</div>
+
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
