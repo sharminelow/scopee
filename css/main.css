@@ -1,3 +1,10 @@
+#periscope-meerkat {
+    border:0;
+    background:none;
+    box-shadow:none;
+    max-height: 115%;
+    max-width: 115%;
+}
 #phyArchitecture {
     border:0;
     background:none;
