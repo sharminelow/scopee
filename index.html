@@ -42,8 +42,14 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section style="width: 100% !important; height: 100% !important; padding: 0 !important;">
-						<div id="videoTitleContainer">
-							<h1 id="videoTitle">Worldscope</h1>
+						<div id="videoTitleContainer" class="fragment fade-out">
+                            <div id="videoOverlay">
+        						<h1 class="whiteText">WorldScope</h1>
+                                <h3 class="whiteText">by Team Litmus</h3>
+                                <p class="whiteText">
+                                    <small>Leong Wei Ming / Low Sharmine / Nguyen Duc Thien / Soh You Jun</small>
+                                </p>
+                            </div>
 						</div>
 						<div style="width: 100% !important; height: 100% !important">
 					        <video autoplay id="video" width="100%" height="100%"
@@ -72,14 +78,6 @@
 					        }
 					        document.addEventListener('DOMContentLoaded', initPlayer);
 					    </script>
-				</section>
-
-				<section>
-					<h1>WorldScope</h1>
-					<h3>by Team Litmus</h3>
-					<p>
-						<small>Leong Wei Ming / Low Sharmine / Nguyen Duc Thien / Soh You Jun</small>
-					</p>
 				</section>
 
 				<section>
@@ -241,9 +239,7 @@
                 <!-- Architecture Diagram -->
                 <section>
                     <section>
-                        <a href="#">
-                            <img class="nobb" id="architecture" data-src="images/architecture.png">
-                        </a>
+                        <img class="nobb" id="architecture" data-src="images/architecture.png">
                     </section>
                     <section class="slide-padding">
                             <h3 class="">Policies</h3>
@@ -256,7 +252,7 @@
                             </ul>
                             <img id="policiesImg" data-src="images/policies.png">
                     </section>
-                    <section class="slide-padding">
+                    <section>
                             <h3 class="">Socket Adapter</h3>
                             <img id="policiesImg" data-src="images/socket.png">
                             <ul class="smfont">
@@ -299,7 +295,7 @@
                     </section>
                 </section>
 
-                <section class="slide-padding">
+                <section>
                     <section>
                             <img id="controlflow" class="nobb" data-src="images/api.png">
                     </section>
@@ -330,36 +326,13 @@
                     </section>
                 </section>
 
-                <section class="slide-padding">
+                <section>
                     <section>
                             <img id="controlflow" class="nobb" data-src="images/database.jpg">
                     </section>
                 </section>
 
-<!-- 				<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
 				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section> -->
-
 
                 <!-- Project Planning, Prioritization of tasks -->
                 <section>
@@ -368,13 +341,13 @@
 
 				<section>
                     <h2>Sharmine</h2>
-                    <p>Plus points</p>
+                    <p><b>Plus points</b></p>
                     <ul>
                         <li>Good with Networks</li>
                         <li>Interested in System Administration</li>
                     </ul>
 
-                    <p>Main Responsibility</p>
+                    <p><b>Main Responsibility</b></p>
                     <ul>
                         <li>Implementation of Media Server for WorldScope</li>
                     </ul> 
@@ -387,13 +360,13 @@
 
                 <section>
                     <h2>Thien</h2>
-                    <p>Plus points</p>
+                    <p><b>Plus points</b></p>
                     <ul>
                         <li>Experienced in Software Engineering</li>
                         <li>Extensive knowledge of various developmental tools</li>
                     </ul>
 
-                    <p>Main Responsibility</p>
+                    <p><b>Main Responsibility</b></p>
                     <ul>
                         <li>Project manager for Litmus for the initial sprints</li>
                         <li>Implementation of application server for WorldScope</li>
@@ -408,13 +381,13 @@
 
                 <section>
                     <h2>You Jun</h2>
-                    <p> Plus points</p>
+                    <p><b>Plus points</b></p>
                     <ul>
                         <li>Prior experience with content management systems on an Enterprise level</li>
                         <li>Extensive knowledge of various developmental tools</li>
                     </ul>
 
-                    <p>Main Responsibility</p>
+                    <p><b>Main Responsibility</b></p>
                     <ul>
                         <li>Implementation of Administrative Panel for WorldScope</li>
                     </ul> 
@@ -428,12 +401,12 @@
                 <section>
                     <h2>Wei Ming</h2>
 
-                        <p>Plus points</p>
+                        <p><b>Plus points</b></p>
                         <ul>
                             <li>Focused on User Interface design and interaction</li>
                         </ul>
 
-                        <p>Main responsibility</p>
+                        <p><b>Main responsibility</b></p>
                         <ul>
                             <li>Implementation of mobile client for WorldScope</li>
                         </ul>
@@ -508,87 +481,63 @@
 
                 <!-- UI - Android Evaluation and Prototyping -->
 
-				<section class="slide-padding">
-					<div class="sl-block" data-block-type="text" data-block-id="4f142d5d007cb9107a73b482b2c7f158" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 280px;">
-						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-							<h2>Mobile Client Prototype</h2>
-						</div>
+				<section>
+					<div>
+						<h2>Mobile Client Prototype</h2>
 					</div>
 				</section>
 
-				<section class="slide-padding">
-					<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 276px; height: auto;" data-block-id="dea1bb18b3d1d1011e1861418b61b2ed">
-						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
-							<h2>Mobile Client UI Evaluation</h2>
-						</div>
-					</div>
-
-					<div class="sl-block" data-block-type="text" data-block-id="70ef28420a7028694fc0cbe92e671f79" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 381px;">
-						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-							<p>Neilsen's Heuristics</p>
-						</div>
-					</div>
+				<section>
+                    <h2>Mobile Client UI Evaluation</h2>
+                    <p>Neilsen's Heuristics</p>
 				</section>
 
-				<section class="slide-padding">
-					<div class="sl-block" data-block-type="text" style="width: 430px; left: 21px; top: 87px; height: auto;" data-block-id="489f5f8aa4d99594ab21a851a972442f">
-						<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
-							<p style="text-align:center"><strong>Match between System and Real world</strong></p>
-						</div>
+				<section>
+					<div>
+                        <h4 style="text-align:center"><strong>Match between System and Real world</strong></h4>
 					</div>
 
-					<div class="feedback-block sl-block" data-block-type="text" style="width: 430px; left: 21px; top: 210px; height: auto;" data-block-id="9d296627a802183ff2be128e155da7b0">
-						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
-							<p>Feedback: <em>"Does 'My friends' and 'Subscribers' mean the same thing?"</em></p>
-						</div>
+					<div class="feedback-block">
+                        <p><em>"Does 'My friends' and 'Subscribers' mean the same thing?"</em></p>
 					</div>
 
-					<div class="image-block sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="b926f2ef92990f96ea8175580f784131">
-						<div class="sl-block-content" style="z-index: 12;">
-                            <img class="simple-img" src="images/heuristic-login.png"/>
-						</div>
+					<div class="image-block">
+                        <img class="simple-img" src="images/heuristic-login.png"/>
 					</div>
 				</section>
 
 
-				<section class="slide-padding">
-					<div class="sl-block" data-block-type="text" style="width: 430px; left: 21px; top: 87px; height: auto;" data-block-id="5cf49bd1e41d4544da04328bd9dbf1f8">
-						<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
-						<p style="text-align:center"><strong>User control and Freedom</strong></p>
-						</div>
-					</div>
+				<section>
 
-					<div class="feedback-block sl-block" data-block-type="text" style="width: 430px; left: 21px; top: 210px; height: auto;" data-block-id="e46399fae014bbf8f7ac7f398e44dc3d">
-						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
-						<p>Feedback: <em>"Does the 'back' button and 'stop' button refer to the same action?"</em></p>
-						</div>
-					</div>
+                    <div>
+                        <h4 style="text-align:center"><strong>User control and Freedom</strong></h4>
+                    </div>
 
-					<div class="image-block sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="64281b8fde70b88af3c52e91a2eab4a7">
-						<div class="sl-block-content" style="z-index: 12;">
+                    <div class="feedback-block">
+                        <p><em>"Does the 'back' button and 'stop' button refer to the same action?"</em></p>
+                    </div>
+
+                    <div class="image-block">
                             <img class="simple-img" src="images/heuristic-viewing.png"/>
-						</div>
-					</div>
+                    </div>
+
 				</section>
 
-				<section class="slide-padding">
-					<div class="sl-block" data-block-type="text" style="width: 430px; left: 21px; top: 87px; height: auto;" data-block-id="9a0ffa045f33a2dc6933f4d4da05ce9b">
-						<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
-							<p style="text-align:center"><strong>Recognition rather than Recall</strong></p>
-						</div>
-					</div>
+				<section>
 
-					<div class="feedback-block sl-block" data-block-type="text" style="width: 430px; left: 21px; top: 210px; height: auto;" data-block-id="1bf0bd1255e99d2217641ca51b89f349">
-						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
-							<p>Feedback: <em>"The application does not allow users to undo their actions easily such as when a user accidentally stopped watching a stream."</em></p>
-						</div>
-					</div>
 
-						<div class="image-block sl-block" data-block-type="image" style="width: 454px; height: 641px; left: 479px; top: 29px;" data-block-id="eb2de52cd34f56b0b41a65da8435cf98">
-						<div class="sl-block-content" style="z-index: 12;">
-                            <img class="simple-img" src="images/heuristic-recent.png"/>
-						</div>
-					</div>
+                    <div>
+                        <h4 style="text-align:center"><strong>Recognition rather than Recall</strong></h4>
+                    </div>
+
+                    <div class="feedback-block">
+                        <p><em>"The application does not allow users to undo their actions easily such as when a user accidentally stopped watching a stream."</em></p>
+                    </div>
+
+                    <div class="image-block">
+                        <img class="simple-img" src="images/heuristic-recent.png"/>
+                    </div>
+
 				</section>
 
                 <section>
