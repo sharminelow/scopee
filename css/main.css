@@ -46,3 +46,134 @@
 .smfont {
     font-size: 0.7em !important;
 }
+
+.intro-point {
+    font-size: 16px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.small-img {
+    max-height: 250px !important;
+    height: auto !important;
+    max-width: 300px  !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+.simple-img {
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+.bottom-img {
+    bottom: 0px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.timeline-point {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+.timeline-point-left {
+    position: absolute !important;
+    left: 0px;
+    bottom: 0px;
+}
+
+.timeline-point-right {
+    position: absolute !important;
+    right: 0px;
+}
+
+.timeline-img-left {
+    position: absolute !important;
+    left: 0px;
+}
+
+.timeline-img-right {
+    position: absolute !important;
+    right: 0px;
+
+}
+
+.arrow-point-down {
+    position: relative;
+    vertical-align: text-bottom !important;
+    margin-bottom: 16px !important;
+    padding: 8px !important;
+    border-radius: 8px;
+    background-color: #CCCCCC
+}
+
+.arrow-point-down::before {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    width: 0; 
+    height: 0; 
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid #CCCCCC;
+}
+
+.arrow-point-up {
+    position: relative;
+    vertical-align: text-bottom !important;
+    margin-top: 16px !important;
+    padding: 8px !important;
+    border-radius: 8px;
+    background-color: #CCCCCC;
+}
+
+.arrow-point-up::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 0; 
+    height: 0; 
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #CCCCCC;
+}
+
+.horizontal-timeline {
+    position: relative;
+    margin: 6px 0px !important;
+    height: 2px;
+    width: 100%;
+    background-color: #CCCCCC
+}
+
+.horizontal-timeline::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    right: 0px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: #CCCCCC
+}
+
+.feedback-block {
+    display: inline-block;
+    vertical-align: top !important;
+}
+
+.image-block {
+    display: inline-block;
+}
