@@ -216,3 +216,7 @@
     padding: 40px 5% !important;
     width: 90% !important;
 }
+
+#basics-table > tr > td {
+    border: none;
+}
