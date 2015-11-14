@@ -1,40 +1,56 @@
+.reveal section img.nobb {
+    border: 0;
+    box-shadow: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#videoTitleContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+#videoTitle {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    color: white;
+    font-size: 140px;
+    font-weight: 600;
+}
+
 #periscope-meerkat {
     border:0;
     background:none;
-    box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
-}
-#phyArchitecture {
-    border:0;
-    background:none;
-    box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
-}
 
-#architecture {
-    border:0;
-    background:none;
-    box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
 }
 
 #policiesImg{
     border:0;
     background:none;
     box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
-#mediaAdapterImg{
+#controlflow{
     border:0;
     background:none;
     box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
+    max-height: 85%;
+    max-width: 85%;
+}
+
+#requestImg{
+    border:0;
+    background:none;
+    box-shadow:none;
+    width: 75%;
 }
 
 .left {
@@ -47,6 +63,7 @@
     font-size: 0.7em !important;
 }
 
+<<<<<<< HEAD
 .intro-point {
     font-size: 16px;
 }
@@ -176,4 +193,9 @@
 
 .image-block {
     display: inline-block;
+}
+
+.slides {
+    height: 100% !important;
+    width: 100% !important;
 }

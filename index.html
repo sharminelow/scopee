@@ -18,19 +18,9 @@
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
         <link rel="stylesheet" href="css/main.css" id="theme">
 
-        <style>
-            .reveal section img.nobb {
-                border: 0;
-                box-shadow: none;
-                display: block;
-                margin: 0 auto;
-                margin-top: 20px;
-            }
-		</style>
-
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
+ 		<script src="shaka-player.compiled.js"></script>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -50,7 +40,40 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+			<div class="slides" style="width: 100% !important; height: 100% !important">
+				<section style="width: 100% !important; height: 100% !important; padding: 0 !important;">
+						<div id="videoTitleContainer">
+							<h1 id="videoTitle">Worldscope</h1>
+						</div>
+						<div style="width: 100% !important; height: 100% !important">
+					        <video autoplay id="video" width="100%" height="100%"
+					               crossorigin="anonymous"
+					               >
+					            Your browser doesn't support HTML5 video.
+					        </video>
+					    </div>
+					    <script>
+					        function initPlayer() {
+					            shaka.polyfill.installAll();
+
+					            var video = document.getElementById('video');
+					            var player = new shaka.player.Player(video);
+					            window.player = player;
+
+					            player.addEventListener('error', function(event) {
+					              console.error(event);
+					              });
+
+					            var mpdUrl = 'http://worldscope.tk:1935/live/streamkey/manifest.mpd';
+					            var estimator = new shaka.util.EWMABandwidthEstimator();
+					            var source = new shaka.player.DashVideoSource(mpdUrl, null, estimator);
+
+					            player.load(source);
+					        }
+					        document.addEventListener('DOMContentLoaded', initPlayer);
+					    </script>
+				</section>
+
 				<section>
 					<h1>WorldScope</h1>
 					<h3>by Team Litmus</h3>
@@ -67,7 +90,7 @@
 
 		        <!-- Motivation -->
 		        <section>
-		        	<img id="periscope-meerkat" data-src="images/periscope-meerkat-logos.jpg">
+		        	<img class="nobb" id="periscope-meerkat" data-src="images/periscope-meerkat-logos.jpg">
 		        </section>
 
 				<section>
@@ -90,7 +113,7 @@
                         <ul>
                             <li>Intuitive UI</li>
                             <li>Convenience of social media login</li>
-                            <li>Easy to find & follow users</li>
+                            <li>Easy to find &amp; follow users</li>
                             <li>Private streaming</li>
                         </ul>
                     </section>
@@ -116,9 +139,11 @@
                     <section>
                         <h2>Social Media</h2>
                         <ul><li>Bot accounts</li></ul>
+                        <div style="height:100px"></div>
                         <h2>Monitoring</h2>
                         <ul><li>Denial-of-service</li></ul>
                     </section>
+
 				</section>
 
 				<section>
@@ -148,7 +173,7 @@
                     <section>
                         <h2>hapi</h2>
                         <ul>
-                            <li>Stable & Reliable</li>
+                            <li>Stable &amp; Reliable</li>
                             <li>Lightweight</li>
                             <li>Well documented</li>
                         </ul>
@@ -203,32 +228,43 @@
                         <h2>Facebook API</h2>
                         <ul>
                             <li>Popular</li>
-                            <li>Twitter done by Periscope</li>
+                            <li>Twitter integrated with Periscope</li>
                         </ul>
                     </section>
 				</section>
 
                 <!-- Physical Diagram -->
         		<section>
-          			<img id="phyArchitecture" data-src="images/phyArchitecture.png">
+          			<img class="nobb" id="phyArchitecture" data-src="images/phyArchitecture.png">
         		</section>
 
                 <!-- Architecture Diagram -->
                 <section>
                     <section>
                         <a href="#">
-                            <img id="architecture" data-src="images/architecture.png">
+                            <img class="nobb" id="architecture" data-src="images/architecture.png">
                         </a>
                     </section>
                     <section>
-                            <h3 class="left">Policies</h3>
+                            <h3 class="">Policies</h3>
+                            <h3 class="left" style="margin-bottom: 60px"></h3>
                             <ul class="left">
-                                <li>Receiving point of websocket messages</li>
-                                <li>Authenticate and validate messages</li>
-                                <li>Fake API request to update main server pipeline</li>
-                                <li>Broadcast messages to chat rooms</li>
+                                <li>Receiving point of API requests</li>
+                                <li>Verify user's credentials</li>
+                                <li>Validate request's path and parameters</li>
+                                <li>Verify permission to access resources</li>
                             </ul>
                             <img id="policiesImg" data-src="images/policies.png">
+                    </section>
+                    <section>
+                            <h3 class="">Socket Adapter</h3>
+                            <img id="policiesImg" data-src="images/socket.png">
+                            <ul class="smfont">
+                                <li>Receiving point of websocket messages</li>
+                                <li>Authenticate and validate messages</li>
+                                <li>Inject API request to main server pipeline</li>
+                                <li>Broadcast messages to chat rooms</li>
+                            </ul>
                     </section>
                     <section>
                             <h3 class="">Other Adapters</h3>
@@ -236,7 +272,67 @@
                                 <li><b>Social Media Adapter:</b> Requests to Facebook</li>
                                 <li><b>Media Server Adapter:</b> Requests to Media Server</li>
                             </ul>
-                            <img id="mediaAdapterImg" data-src="images/mediaAdapter.png">
+                            <img class="nobb" id="mediaAdapterImg" data-src="images/mediaAdapter.png">
+                    </section>
+                    <section>
+                            <h3 class="">Controllers and Services</h3>
+                            <h3 class="left" style="margin-bottom: 70px"></h3>
+                            <ul class="left" style="width: 50%">
+                                <li><b>Controllers: </b>Routing destination for API requests</li>
+                                <li>Designed based on API paths</li>
+                                <li><b>Services: </b>Encapsulate business logic</li>
+                                <li>Expose all features through a single service component</li>
+                                <li>Internal components are based on problem domain objects</li>
+                            </ul>
+                            <img id="policiesImg" data-src="images/controllersservices.png" width="47%">
+                    </section>
+                    <section>
+                            <h3 class="">Storage and Models</h3>
+                            <h3 class="left" style="margin-bottom: 160px"></h3>
+                            <ul class="left" style="width: 50%">
+                                <li><b>Models: </b>Abstraction of database access through ORM</li>
+                                <li>Designed based on unit resources</li>
+                                <li>Basis for REST API design</li>
+                                <li><b>Storage: </b>Initialize and expose component's APIs</li>
+                            </ul>
+                            <img id="policiesImg" data-src="images/orm.png" width="47%">
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                            <img id="controlflow" class="nobb" data-src="images/api.png">
+                    </section>
+                    <section>
+                            <img id="requestImg" data-src="images/api_request.png" class="nobb" style="margin-bottom: 100px">
+                            <p>Client issues a POST request to /api/streams</p>
+                    </section>
+                    <section>
+                            <img id="policiesImg" data-src="images/api_policies.png" style="margin-bottom: 60px">
+                            <p>Check if permissions include user's scope<p>
+                            <p>Validate parameters for new stream<p>
+                    </section>
+                    <section>
+                            <img id="requestImg" data-src="images/api_controllers.png" style="margin-bottom: 60px">
+                            <p>Request is routed to corresponding controller<p>
+                            <p>Process request and call appropriate services<p>
+                    </section>
+                    <section>
+                            <img id="policiesImg" data-src="images/api_services.png" style="max-height: 115%">
+                            <p style="font-size: 80%">Request Media Server for new stream</p>
+                            <p style="font-size: 80%">Call Storage to record stream's info</p>
+                            <p style="font-size: 80%">Call Socket Adapter to open new chat room</p>
+                    </section>
+                    <section>
+                            <img id="policiesImg" data-src="images/api_sockets.png" width="47%">
+                            <p>Call Chat Room to initialize new room</p>
+                            <p>Interceptor format response and sent to user</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                            <img id="controlflow" class="nobb" data-src="images/database.jpg">
                     </section>
                 </section>
 
@@ -264,31 +360,42 @@
                         <img src="images/admin-stream.png" />
                     </section>
 				</section>
+
 				<section>
-                    <section>
-                        <h2>Week 1 ~ 4</h2>
-                        <ul>
-                            <li>User registration / login</li>
-                            <li>Individual streams</li>
-                            <li>Media server integration</li>
-                            <li>Admin login</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Week 5 ~ 8</h2>
-                        <ul>
-                            <li>Comment system</li>
-                            <li>Admin metrics</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Week 9 ~ 13</h2>
-                        <ul>
-                            <li>Sticker system</li>
-                            <li>Admin stream controls</li>
-                            <li>STePS preparations</li>
-                        </ul>
-                    </section>
+                    <table>
+                    	<tbody>
+							<tr>
+								<td  style="vertical-align: middle"><strong>Week 1 ~ 4</strong></td>
+								<td>
+									<ul>
+			                            <li>User registration / login</li>
+			                            <li>Individual streams</li>
+			                            <li>Media server integration</li>
+			                            <li>Admin login</li>
+                        			</ul>
+                        		</td>
+							</tr>
+							<tr>
+								<td  style="vertical-align: middle"><strong>Week 5 ~ 8</strong></td>
+								<td>
+									<ul>
+			                            <li>Comment system</li>
+			                            <li>Admin metrics</li>
+                        			</ul>
+								</td>
+							</tr>
+							<tr>
+								<td  style="vertical-align: middle"><strong>Week 9 ~ 13</strong></td>
+								<td>
+									<ul>
+			                            <li>Sticker system</li>
+			                            <li>Admin stream controls</li>
+			                            <li>STePS preparations</li>
+                        			</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 
 				<section>
@@ -374,35 +481,6 @@
 					</p>
 				</section>
 
-<!-- 				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
- -->
 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
 					<h2>Background Transitions</h2>
 					<p>
