@@ -17,6 +17,16 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
         <link rel="stylesheet" href="css/main.css" id="theme">
+        
+        <style>
+            .reveal section img.nobb {
+                border: 0;
+                box-shadow: none;
+                display: block;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+		</style>
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -48,22 +58,160 @@
 						<small>Leong Wei Ming / Low Sharmine / Nguyen Duc Thien / Soh You Jun</small>
 					</p>
 				</section>
-
+				
 				<section>
-					<h2>Hello There</h2>
+					<h2>Problem?</h2>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 					</p>
 				</section>
 
-                <!-- Physical Diagram -->
-                <section>
+		        <!-- Motivation -->
+		        <section>
+		        	<img id="periscope-meerkat" data-src="images/periscope-meerkat-logos.jpg">
+		        </section>
+
+				<section>
+					<h2>So Why WorldScope?</h2>
+					<p>
+					</p>
+				</section>
+
+        		<section>
                     <section>
-                        <!-- <a href="#" class="navigate-down"> -->
-                            <img id="phyArchitecture" data-src="images/phyArchitecture.png">
-<!--                         </a>
- -->                    </section>
-                </section>
+                        <h2>Periscope</h2>
+                        <img src="images/periscope.png" style="max-height:500px" />
+                    </section>
+                    <section>
+                        <h2>Meerkat</h2>
+                        <img src="images/meerkat.png" style="max-height:500px" />
+                    </section>
+                    <section>
+                        <h2>WorldScope</h2>
+                        <ul>
+                            <li>Intuitive UI</li>
+                            <li>Convenience of social media login</li>
+                            <li>Easy to find & follow users</li>
+                            <li>Private streaming</li>
+                        </ul>
+                    </section>
+				</section>
+				
+				<section>
+                    <section>
+                        <h2>Authorisation</h2>
+                        <ul>
+                            <li>Accessing database</li>
+                            <li>View private stream</li>
+                            <li>Log in to administration panel</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Encryption</h2>
+                        <ul>
+                            <li>Packet replay / sniffing</li>
+                            <li>Access tokens</li>
+                            <li>Brute forcing</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Social Media</h2>
+                        <ul><li>Bot accounts</li></ul>
+                        <h2>Monitoring</h2>
+                        <ul><li>Denial-of-service</li></ul>
+                    </section>
+				</section>
+				
+				<section>
+                    <section><img src="images/nginx.png" class="nobb" /></section>
+                    <section>
+                        <h2>Nginx</h2>
+                        <ul>
+                            <li>Reverse proxy</li>
+                            <li>Performance</li>
+                            <li>Concurrency</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/nodejs.png" class="nobb" /></section>
+                    <section>
+                        <h2>Node.js (JavaScript)</h2>
+                        <ul>
+                            <li>Many concurrent connections</li>
+                            <li>Prior experience</li>
+                            <li>Many users and companies</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/hapi.png" class="nobb" /></section>
+                    <section>
+                        <h2>hapi</h2>
+                        <ul>
+                            <li>Stable & Reliable</li>
+                            <li>Lightweight</li>
+                            <li>Well documented</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/mysql.png" class="nobb" /></section>
+                    <section>
+                        <h2>MySQL</h2>
+                        <ul>
+                            <li>Relational data</li>
+                            <li>Scalable</li>
+                            <li>Well documented</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/wowza.png" class="nobb" /></section>
+                    <section>
+                        <h2>Wowza</h2>
+                        <ul>
+                            <li>Performance</li>
+                            <li>Support</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/android.png" class="nobb" /></section>
+                    <section>
+                        <h2>Android</h2>
+                        <ul>
+                            <li>Java Programming language</li>
+                            <li>Prior experience</li>
+                            <li>Market share</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/mithril.png" class="nobb" /></section>
+                    <section>
+                        <h2>Mithril</h2>
+                        <ul>
+                            <li>Functionality</li>
+                            <li>Performance</li>
+                            <li>Ease of Use</li>
+                        </ul>
+                    </section>
+				</section>
+				<section>
+                    <section><img src="images/facebook.png" class="nobb" style="max-height:500px"  /></section>
+                    <section>
+                        <h2>Facebook API</h2>
+                        <ul>
+                            <li>Popular</li>
+                            <li>Twitter done by Periscope</li>
+                        </ul>
+                    </section>
+				</section>
+				
+                <!-- Physical Diagram -->
+        		<section>
+          			<img id="phyArchitecture" data-src="images/phyArchitecture.png">
+        		</section>
 
                 <!-- Architecture Diagram -->
                 <section>
@@ -91,6 +239,57 @@
                             <img id="mediaAdapterImg" data-src="images/mediaAdapter.png">
                     </section>
                 </section>
+                
+                <!-- Project Planning, Prioritization of tasks -->
+                <!-- UI - Android Evaluation and Prototyping -->
+                
+                <section>
+                    <section>
+                        <img src="images/admin.png" />
+                    </section>
+                    <section>
+                        <h2>Plans</h2>
+                        <ul>
+                            <li>Login</li>
+                            <li>Metrics</li>
+                            <li>Streams</li>
+                            <li>Users</li>
+                            <li>Settings</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="images/admin-streams.png" />
+                    </section>
+                    <section>
+                        <img src="images/admin-stream.png" />
+                    </section>
+				</section>
+				<section>
+                    <section>
+                        <h2>Week 1 ~ 4</h2>
+                        <ul>
+                            <li>User registration / login</li>
+                            <li>Individual streams</li>
+                            <li>Media server integration</li>
+                            <li>Admin login</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Week 5 ~ 8</h2>
+                        <ul>
+                            <li>Comment system</li>
+                            <li>Admin metrics</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Week 9 ~ 13</h2>
+                        <ul>
+                            <li>Sticker system</li>
+                            <li>Admin stream controls</li>
+                            <li>STePS preparations</li>
+                        </ul>
+                    </section>
+				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
