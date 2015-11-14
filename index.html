@@ -90,7 +90,7 @@
                         <ul>
                             <li>Intuitive UI</li>
                             <li>Convenience of social media login</li>
-                            <li>Easy to find & follow users</li>
+                            <li>Easy to find &amp; follow users</li>
                             <li>Private streaming</li>
                         </ul>
                     </section>
@@ -148,7 +148,7 @@
                     <section>
                         <h2>hapi</h2>
                         <ul>
-                            <li>Stable & Reliable</li>
+                            <li>Stable &amp; Reliable</li>
                             <li>Lightweight</li>
                             <li>Well documented</li>
                         </ul>
@@ -221,14 +221,25 @@
                         </a>
                     </section>
                     <section>
-                            <h3 class="left">Policies</h3>
+                            <h3 class="">Policies</h3>
+                            <h3 class="left" style="margin-bottom: 60px"></h3>
                             <ul class="left">
-                                <li>Receiving point of websocket messages</li>
-                                <li>Authenticate and validate messages</li>
-                                <li>Fake API request to update main server pipeline</li>
-                                <li>Broadcast messages to chat rooms</li>
+                                <li>Receiving point of API requests</li>
+                                <li>Verify user's credentials</li>
+                                <li>Validate request's path and parameters</li>
+                                <li>Verify permission to access resources</li>
                             </ul>
                             <img id="policiesImg" data-src="images/policies.png">
+                    </section>
+                    <section>
+                            <h3 class="">Socket Adapter</h3>
+                            <img id="policiesImg" data-src="images/socket.png">
+                            <ul class="smfont">
+                                <li>Receiving point of websocket messages</li>
+                                <li>Authenticate and validate messages</li>
+                                <li>Inject API request to main server pipeline</li>
+                                <li>Broadcast messages to chat rooms</li>
+                            </ul>
                     </section>
                     <section>
                             <h3 class="">Other Adapters</h3>
@@ -237,6 +248,86 @@
                                 <li><b>Media Server Adapter:</b> Requests to Media Server</li>
                             </ul>
                             <img id="mediaAdapterImg" data-src="images/mediaAdapter.png">
+                    </section>
+                    <section>
+                            <h3 class="">Controllers and Services</h3>
+                            <h3 class="left" style="margin-bottom: 70px"></h3>
+                            <ul class="left" style="width: 50%">
+                                <li><b>Controllers: </b>Routing destination for API requests</li>
+                                <li>Designed based on API paths</li>
+                                <li><b>Services: </b>Encapsulate business logic</li>
+                                <li>Expose all features through a single service component</li>
+                                <li>Internal components are based on problem domain objects</li>
+                            </ul>
+                            <img id="policiesImg" data-src="images/controllersservices.png" width="47%">
+                    </section>
+                    <section>
+                            <h3 class="">Storage and Models</h3>
+                            <h3 class="left" style="margin-bottom: 160px"></h3>
+                            <ul class="left" style="width: 50%">
+                                <li><b>Models: </b>Abstraction of database access through ORM</li>
+                                <li>Designed based on unit resources</li>
+                                <li>Basis for REST API design</li>
+                                <li><b>Storage: </b>Initialize and expose component's APIs</li>
+                            </ul>
+                            <img id="policiesImg" data-src="images/orm.png" width="47%">
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <a href="#">
+                            <img id="controlflow" class="nobb" data-src="images/api.png">
+                        </a>
+                    </section>
+                    <section>
+                            <h3 class="">Policies</h3>
+                            <h3 class="left" style="margin-bottom: 60px"></h3>
+                            <img id="policiesImg" data-src="api_request.png">
+                            <ul class="left">
+                                <li>Receiving point of API requests</li>
+                            </ul>
+                    </section>
+                    <section>
+                            <h3 class="">Socket Adapter</h3>
+                            <img id="policiesImg" data-src="images/socket.png">
+                            <ul class="smfont">
+                                <li>Receiving point of websocket messages</li>
+                                <li>Authenticate and validate messages</li>
+                                <li>Inject API request to main server pipeline</li>
+                                <li>Broadcast messages to chat rooms</li>
+                            </ul>
+                    </section>
+                    <section>
+                            <h3 class="">Other Adapters</h3>
+                            <ul class="smfont">
+                                <li><b>Social Media Adapter:</b> Requests to Facebook</li>
+                                <li><b>Media Server Adapter:</b> Requests to Media Server</li>
+                            </ul>
+                            <img id="mediaAdapterImg" data-src="images/mediaAdapter.png">
+                    </section>
+                    <section>
+                            <h3 class="">Controllers and Services</h3>
+                            <h3 class="left" style="margin-bottom: 70px"></h3>
+                            <ul class="left" style="width: 50%">
+                                <li><b>Controllers: </b>Routing destination for API requests</li>
+                                <li>Designed based on API paths</li>
+                                <li><b>Services: </b>Encapsulate business logic</li>
+                                <li>Expose all features through a single service component</li>
+                                <li>Internal components are based on problem domain objects</li>
+                            </ul>
+                            <img id="policiesImg" data-src="images/controllersservices.png" width="47%">
+                    </section>
+                    <section>
+                            <h3 class="">Storage and Models</h3>
+                            <h3 class="left" style="margin-bottom: 160px"></h3>
+                            <ul class="left" style="width: 50%">
+                                <li><b>Models: </b>Abstraction of database access through ORM</li>
+                                <li>Designed based on unit resources</li>
+                                <li>Basis for REST API design</li>
+                                <li><b>Storage: </b>Initialize and expose component's APIs</li>
+                            </ul>
+                            <img id="policiesImg" data-src="images/orm.png" width="47%">
                     </section>
                 </section>
 
