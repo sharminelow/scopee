@@ -1,41 +1,50 @@
+.reveal section img.nobb {
+    border: 0;
+    box-shadow: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 #periscope-meerkat {
     border:0;
     background:none;
-    box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
+
 }
+
 #phyArchitecture {
     border:0;
     background:none;
     box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #architecture {
     border:0;
     background:none;
     box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #policiesImg{
     border:0;
     background:none;
     box-shadow:none;
-    max-height: 115%;
-    max-width: 115%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
-#mediaAdapterImg{
+/*#mediaAdapterImg{
     border:0;
     background:none;
     box-shadow:none;
     max-height: 115%;
     max-width: 115%;
-}
+}*/
 
 .left {
     float: left;
